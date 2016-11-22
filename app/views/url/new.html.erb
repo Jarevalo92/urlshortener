@@ -1,0 +1,22 @@
+<%= render 'form' %>
+
+<table class = "table">
+  <tr>
+    <th>
+      Address
+    </th>
+    <th>
+      shortened
+    </th>
+    <th>
+      id
+    </th>
+  </tr>
+  <% @urls.each do |url|%>
+    <tr>
+      <td><%= link_to url.address, url.address%></td>
+      <td><%= link_to "shorturl.co/#{url.short}" ,url.address%></td>
+      <td><%= link_to url.id, url.address %></td>
+    </tr>
+  <% end %>
+</table>
